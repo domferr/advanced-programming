@@ -47,7 +47,6 @@ def bench(n_threads=1, seq_iter=1, iter=1):
                 end_time = time.perf_counter()
                 run_times.append(end_time - start_time)
 
-            print(run_times)
             # compute mean and variance
             mean = statistics.mean(run_times)
             variance = statistics.variance(run_times, xbar=mean) if len(run_times) > 1 else 0
@@ -66,6 +65,7 @@ def bench(n_threads=1, seq_iter=1, iter=1):
 
 @bench(n_threads=2)
 def decorator_example():
+    """An example that demonstrates that it is possible to use the @bench decorator with some arguments"""
     just_wait(20)
 
 def test(fun, *args, iter=1):
@@ -80,5 +80,29 @@ def test(fun, *args, iter=1):
             json.dump(res, file)
 
 if __name__ == "__main__":
-    test(just_wait, 20)
-    test(grezzo, 20)
+    test(just_wait, 10, iter=8)
+    test(grezzo, 18, iter=8)
+
+"""
+The experiment's results highlight two distinct behaviors:
+
+- The test applied to the "just_wait" function demonstrates that when the number 
+  of threads doubles, the execution time halves.
+- The test applied to the "grezzo" function indicates that when the number of 
+  threads doubles, the execution time remains nearly the same, with a negligible 
+  degree of error.
+
+These findings validate the claim that "Two threads calling a function may take 
+twice as much time as a single thread calling the function twice" when considering 
+the results related to the "grezzo" function. However, the results with the 
+"just_wait" function suggest that the claim may not hold true in all scenarios.
+The crucial distinction is that the "grezzo" function is CPU-intensive, while the 
+"just_wait" function is I/O-intensive. As a consequence, when the "just_wait" 
+function calls the "sleep" function, its thread releases the GIL, allowing the next 
+thread to be scheduled and acquire the GIL.
+
+In summary, experiment's results highlight that, while the claim holds for 
+CPU-intensive functions like "grezzo", it may not hold for I/O-intensive functions 
+like "just_wait" due to the different behaviors influenced by GIL release during 
+I/O operations.
+"""
