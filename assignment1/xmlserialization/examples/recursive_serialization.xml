@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Array>
+	<Person>
+		<name type="String">Giulio</name>
+		<surname type="String">Cesare</surname>
+		<address type="Address">
+			<streetname type="String">Piazza del Colosseo</streetname>
+			<postalcode type="String">00184</postalcode>
+			<city type="String">Roma</city>
+			<number type="int">1</number>
+		</address>
+	</Person>
+	<Person>
+		<name type="String">Alan</name>
+		<surname type="String">Turing</surname>
+		<address type="Address">
+			<streetname type="String">High Street</streetname>
+			<postalcode type="String">SK9 1AX</postalcode>
+			<city type="String">Wilmslow</city>
+			<number type="int">78</number>
+		</address>
+	</Person>
+	<Person>
+		<name type="String">Rino</name>
+		<surname type="String">Gaetano</surname>
+		<address type="Address">
+			<streetname type="String">Viale Cristoforo Colombo</streetname>
+			<postalcode type="String">88900</postalcode>
+			<city type="String">Crotone</city>
+			<number type="int">117</number>
+		</address>
+	</Person>
+</Array>

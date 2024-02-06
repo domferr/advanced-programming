@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Array>
+	<User>
+		<id type="String">001</id>
+		<products type="Product">
+			<Array>
+				<Product>
+					<productname type="String">Wine</productname>
+					<price type="double">11.4</price>
+				</Product>
+				<Product>
+					<productname type="String">Pizza</productname>
+					<price type="double">5.9</price>
+				</Product>
+			</Array>
+		</products>
+	</User>
+	<User>
+		<id type="String">002</id>
+		<products type="Product">
+			<Array />
+		</products>
+	</User>
+	<User>
+		<id type="String">001</id>
+		<products type="Product">
+			<Array>
+				<Product>
+					<productname type="String">Apple</productname>
+					<price type="double">1.0</price>
+				</Product>
+				<Product>
+					<productname type="String">Eggs</productname>
+					<price type="double">1.75</price>
+				</Product>
+				<Product>
+					<productname type="String">Ham</productname>
+					<price type="double">0.75</price>
+				</Product>
+			</Array>
+		</products>
+	</User>
+</Array>

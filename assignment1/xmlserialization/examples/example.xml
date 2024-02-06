@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Array>
+	<Student>
+		<firstName type="String">null</firstName>
+		<surname type="String">null</surname>
+		<age type="int">0</age>
+	</Student>
+	<Student>
+		<firstName type="String">Jane</firstName>
+		<surname type="String">Doe</surname>
+		<age type="int">42</age>
+	</Student>
+	<HashMap>
+		<notXMLable />
+	</HashMap>
+</Array>
