@@ -29,3 +29,9 @@ out/
 count_anagrams.txt
 
 .venv/
+/assignment1/eightpuzzle/eightpuzzleold/target/
+/assignment1/eightpuzzle/Eight-Puzzle-main/EightBoard/target/
+/assignment1/eightpuzzle/Eight-Puzzle-main/EightController/target/
+/assignment1/eightpuzzle/Eight-Puzzle-main/EightTile/target/
+/assignment1/eightpuzzle/EightTile/target/
+/assignment1/eightpuzzle/target/
